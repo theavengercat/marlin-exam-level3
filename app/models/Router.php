@@ -28,7 +28,7 @@ class Router {
         $route = $_SERVER['REQUEST_URI'];
 
         if(array_key_exists($route, $this->routes)) {
-            include $this->routes[$route]; exit;
+            include "../".$this->routes[$route]; exit;
         } else {
             include $this->page404; exit;
         }
