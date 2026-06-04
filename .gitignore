@@ -1,0 +1,30 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+
+# Logs
+*.log
+logs/
+
+# PHP dependencies
+vendor/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build/cache
+cache/
+tmp/
+temp/
+
+# Composer
+composer.phar
+
+# Test coverage
+coverage/
