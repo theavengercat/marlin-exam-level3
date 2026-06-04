@@ -1,0 +1,9 @@
+services:
+  php-web-ctf:
+    build: .
+    container_name: marlin_php_web_ctf
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./storage:/app/storage
+    restart: unless-stopped

@@ -1,0 +1,6 @@
+Lab rules:
+
+1. Work only in your local environment.
+2. Read the source code.
+3. Find the training flags.
+4. Do not test these ideas on systems without permission.

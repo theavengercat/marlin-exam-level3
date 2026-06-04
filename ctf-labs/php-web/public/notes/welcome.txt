@@ -1,0 +1,3 @@
+Welcome to the notes section.
+
+This task demonstrates why file paths must be validated carefully.
