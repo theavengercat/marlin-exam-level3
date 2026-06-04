@@ -1,0 +1,35 @@
+project: marlin-exam-level3-php-web-ctf
+title: PHP Web CTF Lab
+type: educational
+language: PHP
+runtime: local
+safety: local-only
+tasks:
+  - id: task1-login-bypass
+    title: Login Bypass
+    category: Web
+    topic: SQL Injection
+    difficulty: beginner
+    flag: FLAG{php_sqli_login_lab_2026}
+    defensive_takeaway: Use prepared statements and avoid concatenating user input into SQL queries.
+  - id: task2-profile-access
+    title: Profile Access
+    category: Web
+    topic: IDOR
+    difficulty: beginner
+    flag: FLAG{idor_is_access_control_failure}
+    defensive_takeaway: Object identifiers are not access control; enforce authorization server-side.
+  - id: task3-cookie-role
+    title: Cookie Role
+    category: Web
+    topic: Insecure Client-Side Trust
+    difficulty: beginner
+    flag: FLAG{client_side_role_is_not_auth}
+    defensive_takeaway: Never trust client-controlled authorization data without integrity protection and server-side checks.
+  - id: task4-training-notes
+    title: Training Notes
+    category: Web
+    topic: Path Traversal
+    difficulty: beginner
+    flag: FLAG{path_traversal_needs_strict_path_validation}
+    defensive_takeaway: Use allowlists and strict path validation for file access.
