@@ -1,0 +1,33 @@
+name: PHP Lab Check
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  php-syntax-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: pdo_sqlite
+
+      - name: Check PHP syntax
+        run: |
+          find . -name "*.php" -print0 | xargs -0 -n1 php -l
+
+      - name: Run local smoke test
+        run: |
+          if [ -f "ctf-labs/php-web/tests/smoke_test.php" ]; then
+            php ctf-labs/php-web/tests/smoke_test.php
+          else
+            echo "Smoke test not found, skipping."
+          fi
